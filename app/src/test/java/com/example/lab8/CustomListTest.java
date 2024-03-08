@@ -25,7 +25,9 @@ public class CustomListTest {
     }
 
     public CustomList MockCityList(){
-        list = new CustomList(null,new ArrayList<>()); return list;
+        list = new CustomList(null,new ArrayList<>());
+        list.addCity(mockCity());
+        return list;
     }
     /**
      * get the size of the list
