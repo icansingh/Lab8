@@ -61,4 +61,15 @@ public class CustomListTest {
         assertEquals("City not found", exception.getMessage());
     }
 
+    @Test
+    void testCountCities(){
+        CustomList cityList = MockCityList();
+        City city2 = new City("Charlottetown", "Prince Edward Island");
+        City city3 = new City("Toronto", "Ontario");
+        cityList.addCity(city2);
+        cityList.addCity(city3);
+
+        assertEquals(3, cityList.countCities());
+    }
+
 }
